@@ -27,7 +27,7 @@ export default function Home() {
           >
             <div className="w-16 h-1 bg-white mb-6"></div>
             <h1 className="font-serif text-5xl md:text-7xl text-white font-medium leading-tight mb-6">
-              The Crossroad High <br /> School
+              The Crossroad <br /> High School
             </h1>
             <p className="text-white/90 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
               Empowering students to achieve academic excellence and personal growth in a supportive, innovative environment.
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-8 leading-tight">
-              About Crossroad High <br /> School
+              About Crossroad <br /> High School
             </h2>
             <div className="w-12 h-1 bg-primary mb-8"></div>
             <p className="text-gray-600 leading-relaxed mb-6">

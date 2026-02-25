@@ -24,7 +24,7 @@ export default function About() {
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-8 leading-tight">
-            The Crossroad High <br /> School
+            The Crossroad <br /> High School
           </h2>
           <div className="w-12 h-1 bg-primary mb-8"></div>
           
