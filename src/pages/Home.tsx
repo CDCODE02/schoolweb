@@ -127,12 +127,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Computer Science', img: 'https://picsum.photos/seed/cs/600/400', desc: 'Exploring algorithms, coding, and the future of technology.' },
-              { title: 'Fine Arts', img: 'https://picsum.photos/seed/art/600/400', desc: 'Unleashing creativity through painting, sculpture, and digital media.' },
-              { title: 'Humanities', img: 'https://picsum.photos/seed/humanities/600/400', desc: 'Understanding the human experience through literature and philosophy.' },
+              { title: 'Computer Science', img: 'https://i.ibb.co/nN22tcL8/school-template-curriculum-img-1.jpg', desc: 'Exploring algorithms, coding, and the future of technology.' },
+              { title: 'Fine Arts', img: 'https://i.ibb.co/yBZQZ4wn/school-template-curriculum-img-2.jpg', desc: 'Unleashing creativity through painting, sculpture, and digital media.' },
+              { title: 'Humanities', img: 'https://i.ibb.co/prkWq5K5/school-template-curriculum-img-3.jpg', desc: 'Understanding the human experience through literature and philosophy.' },
               { title: 'History', img: 'https://picsum.photos/seed/history/600/400', desc: 'Learning from the past to shape a better future.' },
-              { title: 'Mathematics', img: 'https://picsum.photos/seed/math/600/400', desc: 'Developing critical thinking and problem-solving skills.' },
-              { title: 'Science', img: 'https://picsum.photos/seed/science/600/400', desc: 'Investigating the natural world through experimentation and inquiry.' },
+              { title: 'Mathematics', img: 'https://i.ibb.co/M5crh80H/school-template-curriculum-img-5.jpg', desc: 'Developing critical thinking and problem-solving skills.' },
+              { title: 'Science', img: 'https://i.ibb.co/fY6CNLYD/school-template-curriculum-img-4.jpg', desc: 'Investigating the natural world through experimentation and inquiry.' },
             ].map((item, index) => (
               <motion.div 
                 key={index}
