@@ -87,7 +87,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative group cursor-pointer">
           <div className="aspect-video w-full overflow-hidden rounded-xl shadow-xl relative">
              <img 
-              src="https://picsum.photos/seed/campus_building/1600/900" 
+              src="https://i.ibb.co/gL1Ks6Wy/thumbimg.jpg" 
               alt="School Campus" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
