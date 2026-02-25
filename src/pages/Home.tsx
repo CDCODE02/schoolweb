@@ -10,8 +10,8 @@ export default function Home() {
       <section className="relative h-[600px] md:h-[700px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://picsum.photos/seed/school_hero/1920/1080" 
-            alt="Students smiling" 
+            src="https://i.ibb.co/RkhKG3xg/020.jpg" 
+            alt="School Hero" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -195,16 +195,26 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-1 bg-white/30 mx-auto mb-8"></div>
           <h2 className="font-serif text-3xl md:text-4xl mb-6">Stay updated with what's happening at <br /> Crossroad School Texas</h2>
-          <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto mt-8">
+          <form 
+            className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto mt-8"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert('Thank you for subscribing!');
+            }}
+          >
             <input 
               type="email" 
               placeholder="Email address" 
+              required
               className="px-6 py-3 rounded bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 w-full"
             />
-            <button className="px-8 py-3 bg-gray-900 text-white font-bold uppercase text-sm tracking-wider rounded hover:bg-gray-800 transition-colors">
+            <button 
+              type="submit"
+              className="px-8 py-3 bg-gray-900 text-white font-bold uppercase text-sm tracking-wider rounded hover:bg-gray-800 transition-colors cursor-pointer"
+            >
               Subscribe
             </button>
-          </div>
+          </form>
         </div>
       </section>
     </div>
