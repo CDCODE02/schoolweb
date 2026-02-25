@@ -37,7 +37,7 @@ export default function Contact() {
                 <Phone className="mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Phone</h3>
-                  <p className="text-white/80">+1 123-456-7890</p>
+                  <p className="text-white/80">+1 812 221 1479</p>
                 </div>
               </div>
 
@@ -103,7 +103,7 @@ export default function Contact() {
       {/* Map Section (Placeholder) */}
       <section className="h-96 w-full bg-gray-200 relative">
          <iframe 
-           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1626362244585!5m2!1sen!2sus" 
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.785461234567!2d-84.119076!3d34.420658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f58692b8c8c8c9%3A0x1234567890abcdef!2s28%20Main%20St%2C%20Dawsonville%2C%20GA%2030534!5e0!3m2!1sen!2sus!4v1626362244585!5m2!1sen!2sus" 
            width="100%" 
            height="100%" 
            style={{border:0}} 
