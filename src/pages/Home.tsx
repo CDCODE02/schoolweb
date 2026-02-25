@@ -161,7 +161,7 @@ export default function Home() {
           <div className="order-2 md:order-1 relative">
              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gray-200 rounded-xl z-0"></div>
              <img 
-              src="https://picsum.photos/seed/basketball/800/1000" 
+              src="https://www.whu.edu/fileadmin/_processed_/0/f/csm_Student_Life_BCs_People_799e2fad3e.jpg" 
               alt="Student Life" 
               className="relative z-10 w-full rounded-xl shadow-lg"
               referrerPolicy="no-referrer"
