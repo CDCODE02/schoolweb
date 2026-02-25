@@ -52,6 +52,33 @@ export default function About() {
         </div>
       </section>
 
+      {/* Headmaster */}
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="relative">
+            <img 
+              src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/school-template-headmaster-img.jpg" 
+              alt="Headmaster" 
+              className="rounded-lg shadow-xl w-full"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 shadow-lg rounded-lg hidden md:block">
+              <span className="text-6xl text-primary font-serif leading-none">“</span>
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="font-serif text-3xl md:text-4xl text-gray-900 italic leading-relaxed mb-8">
+              With the support from our faculty, we cultivate an environment where students feel safe to take risks, ask questions, and discover their true selves.
+            </h3>
+            <div>
+              <p className="font-serif text-xl text-gray-900 font-bold">Jonathan Doe</p>
+              <p className="text-gray-500 uppercase tracking-wider text-sm mt-1">Headmaster</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-12 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-12">
