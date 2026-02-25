@@ -23,7 +23,7 @@ export default function Activities() {
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-6xl mx-auto space-y-32">
           
-          {/* 8th Grade Activities */}
+          {/* 10th Grade Activities */}
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
                <img 
@@ -34,9 +34,9 @@ export default function Activities() {
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="font-serif text-4xl text-gray-900 mb-6">8th Grade Activities</h2>
+              <h2 className="font-serif text-4xl text-gray-900 mb-6">10th Grade Activities</h2>
               <p className="text-gray-600 leading-relaxed">
-                Our 8th-grade transition program is designed to welcome new students into the Crossroad family. Through orientation camps, mentorship programs, and social events, we ensure that every student feels connected and supported from day one. These activities build friendships and confidence before the academic year fully kicks into gear.
+                Our 10th-grade transition program is designed to welcome new students into the Crossroad family. Through orientation camps, mentorship programs, and social events, we ensure that every student feels connected and supported from day one. These activities build friendships and confidence before the academic year fully kicks into gear.
               </p>
             </div>
           </div>

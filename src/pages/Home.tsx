@@ -173,7 +173,7 @@ export default function Home() {
             
             <div className="space-y-8">
               {[
-                { title: '8th Grade Activities', desc: 'Special programs designed to welcome our newest students and help them transition smoothly.' },
+                { title: '10th Grade Activities', desc: 'Special programs designed to welcome our newest students and help them transition smoothly.' },
                 { title: 'Athletics', desc: 'A robust sports program fostering teamwork, discipline, and school spirit across varsity and junior varsity teams.' },
                 { title: 'Publications', desc: 'Student-run newspapers, yearbooks, and literary magazines that give a voice to our community.' },
               ].map((item, idx) => (
