@@ -44,7 +44,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img 
-              src="https://picsum.photos/seed/headmaster/800/900" 
+              src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/school-template-headmaster-img.jpg" 
               alt="Headmaster" 
               className="rounded-lg shadow-xl w-full"
               referrerPolicy="no-referrer"
