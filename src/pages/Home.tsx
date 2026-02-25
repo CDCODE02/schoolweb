@@ -27,7 +27,7 @@ export default function Home() {
           >
             <div className="w-16 h-1 bg-white mb-6"></div>
             <h1 className="font-serif text-5xl md:text-7xl text-white font-medium leading-tight mb-6">
-              The Crossroad <br /> School Texas
+              The Crossroad High <br /> School
             </h1>
             <p className="text-white/90 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
               Empowering students to achieve academic excellence and personal growth in a supportive, innovative environment.
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-8 leading-tight">
-              About Crossroad <br /> School Texas
+              About Crossroad High <br /> School
             </h2>
             <div className="w-12 h-1 bg-primary mb-8"></div>
             <p className="text-gray-600 leading-relaxed mb-6">
@@ -194,7 +194,7 @@ export default function Home() {
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-primary text-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-1 bg-white/30 mx-auto mb-8"></div>
-          <h2 className="font-serif text-3xl md:text-4xl mb-6">Stay updated with what's happening at <br /> Crossroad School Texas</h2>
+          <h2 className="font-serif text-3xl md:text-4xl mb-6">Stay updated with what's happening at <br /> Crossroad High School</h2>
           <form 
             className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto mt-8"
             onSubmit={(e) => {
