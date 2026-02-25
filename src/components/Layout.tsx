@@ -103,9 +103,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="font-serif text-2xl text-gray-900 mb-6">Crossroad High School</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Empowering students to achieve academic excellence and personal growth in a supportive, innovative environment.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
               1234 Education Lane, <br />
               Springfield, IL 62704, <br />
               United States.
