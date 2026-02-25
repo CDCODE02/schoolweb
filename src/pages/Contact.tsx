@@ -45,7 +45,7 @@ export default function Contact() {
                 <Mail className="mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-white/80">admissions@crossroad.edu</p>
+                  <p className="text-white/80 break-words">administration@crossroadprivatehighschool.org</p>
                 </div>
               </div>
             </div>

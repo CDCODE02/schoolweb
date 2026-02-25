@@ -113,15 +113,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="font-serif text-2xl text-gray-900 mb-6">Main Office</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-1">+1 812 221 1479</p>
-            <p className="text-gray-600 text-sm leading-relaxed">8:00 a.m. – 4:00 p.m.</p>
+            <p className="text-gray-600 text-sm leading-relaxed mb-1">8:00 a.m. – 4:00 p.m.</p>
+            <p className="text-gray-600 text-sm leading-relaxed hover:text-primary cursor-pointer break-words">
+              administration@crossroadprivatehighschool.org
+            </p>
           </div>
 
           {/* Column 3 */}
           <div>
             <h3 className="font-serif text-2xl text-gray-900 mb-6">Attendance</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-1">+1 812 221 1479</p>
-            <p className="text-gray-600 text-sm leading-relaxed hover:text-primary cursor-pointer">
-              attendance@crossroad.edu
+            <p className="text-gray-600 text-sm leading-relaxed hover:text-primary cursor-pointer break-words">
+              studentservice@crossroadprivatehighschool.org
             </p>
           </div>
         </div>
