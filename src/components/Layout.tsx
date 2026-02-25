@@ -99,58 +99,54 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24 border-t border-gray-200">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Column 1 */}
-          <div>
-            <h3 className="font-serif text-2xl text-gray-900 mb-6">Crossroad High School</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              28 Main Street, <br />
-              Dawsonville, GA 30534, <br />
-              United States.
+          {/* Column 1: Logo & Description */}
+          <div className="flex flex-col items-start">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="https://i.ibb.co/hRMKW1y9/schoollogo.png" alt="Crossroad High School Logo" className="h-12 w-auto" />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl leading-none text-gray-900">Crossroad</span>
+                <span className="font-bold text-xl leading-none text-gray-900">High School</span>
+              </div>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
+              Dedicated to providing quality education and fostering holistic growth. We strive to create a supportive environment where every student learns and grows.
             </p>
+            <div className="flex gap-4 text-primary">
+              <a href="#" className="hover:text-primary-dark transition-colors"><Twitter size={20} /></a>
+              <a href="#" className="hover:text-primary-dark transition-colors"><Facebook size={20} /></a>
+              <a href="#" className="hover:text-primary-dark transition-colors"><Instagram size={20} /></a>
+            </div>
           </div>
 
-          {/* Column 2 */}
-          <div>
-            <h3 className="font-serif text-2xl text-gray-900 mb-6">Main Office</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-1">+1 812 221 1479</p>
-            <p className="text-gray-600 text-sm leading-relaxed mb-1">8:00 a.m. – 4:00 p.m.</p>
-            <p className="text-gray-600 text-sm leading-relaxed hover:text-primary cursor-pointer break-words">
-              administration@crossroadprivatehighschool.org
-            </p>
+          {/* Column 2: Useful Links */}
+          <div className="md:pl-12">
+            <h3 className="font-serif text-2xl text-gray-900 mb-6">Useful Links</h3>
+            <div className="flex flex-col gap-3">
+              <Link to="/" className="text-primary hover:text-primary-dark transition-colors text-sm font-medium">Home</Link>
+              <Link to="/about" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium">About</Link>
+              <Link to="/academics" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium">Academics</Link>
+              <Link to="/activities" className="text-gray-600 hover:text-primary transition-colors text-sm font-medium">Activities</Link>
+            </div>
           </div>
 
-          {/* Column 3 */}
+          {/* Column 3: Contact Us */}
           <div>
-            <h3 className="font-serif text-2xl text-gray-900 mb-6">Attendance</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-1">+1 812 221 1479</p>
-            <p className="text-gray-600 text-sm leading-relaxed hover:text-primary cursor-pointer break-words">
-              studentservice@crossroadprivatehighschool.org
-            </p>
+            <h3 className="font-serif text-2xl text-gray-900 mb-6">Contact us</h3>
+            <div className="space-y-4 text-sm text-gray-600">
+              <p className="leading-relaxed">
+                28 Main Street, Dawsonville, GA<br />
+                30534, United States.
+              </p>
+              <p>+1 812 221 1479</p>
+              <p className="hover:text-primary cursor-pointer break-words">
+                administration@crossroadprivatehighschool.org
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
-            <img src="https://i.ibb.co/hRMKW1y9/schoollogo.png" alt="Crossroad High School Logo" className="h-8 w-auto" />
-            <span className="font-bold text-gray-900">Crossroad High School</span>
-          </div>
-          
-          <div className="flex gap-6 text-sm font-medium text-gray-600">
-            <Link to="/" className="hover:text-primary">Home</Link>
-            <Link to="/about" className="hover:text-primary">About</Link>
-            <Link to="/academics" className="hover:text-primary">Academics</Link>
-            <Link to="/activities" className="hover:text-primary">Activities</Link>
-            <Link to="/contact" className="hover:text-primary">Contact</Link>
-          </div>
-
-          <div className="flex gap-4 text-primary">
-            <a href="#" className="hover:text-primary-dark"><Twitter size={16} /></a>
-            <a href="#" className="hover:text-primary-dark"><Facebook size={16} /></a>
-            <a href="#" className="hover:text-primary-dark"><Instagram size={16} /></a>
-          </div>
-        </div>
-        <div className="text-center mt-8 text-xs text-gray-400">
-          Copyright © {new Date().getFullYear()} Crossroad High School.
+        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
+          Copyright © {new Date().getFullYear()} Crossroad High School | Powered by Crossroad High School
         </div>
       </footer>
     </div>
