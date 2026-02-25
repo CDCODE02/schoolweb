@@ -26,8 +26,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-lg mb-1">Address</h3>
                   <p className="text-white/80">
-                    1234 Education Lane, <br />
-                    Springfield, IL 62704, <br />
+                    28 Main Street, <br />
+                    Dawsonville, GA 30534, <br />
                     United States.
                   </p>
                 </div>
