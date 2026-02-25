@@ -38,18 +38,29 @@ export default function Academics() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="bg-primary py-24 px-6 text-center">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="font-serif text-5xl md:text-6xl text-white mb-4"
-        >
-          Academics
-        </motion.h1>
-        <div className="flex justify-center gap-4 text-white/70 text-sm uppercase tracking-wider font-medium">
-          <span>Home</span>
-          <span>•</span>
-          <span className="text-white">Academics</span>
+      <section className="relative py-24 px-6 text-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://www.reed.edu/assets-main/images/hero/reed-campus-life-renn-fayre.jpg" 
+            alt="Academics Background" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        <div className="relative z-10">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="font-serif text-5xl md:text-6xl text-white mb-4"
+          >
+            Academics
+          </motion.h1>
+          <div className="flex justify-center gap-4 text-white/70 text-sm uppercase tracking-wider font-medium">
+            <span>Home</span>
+            <span>•</span>
+            <span className="text-white">Academics</span>
+          </div>
         </div>
       </section>
 
