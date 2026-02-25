@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Facebook, Twitter, Instagram, GraduationCap } from 'lucide-react';
+import { Menu, X, Facebook, Twitter, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -23,9 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="bg-white py-4 px-6 md:px-12 lg:px-24 shadow-sm sticky top-0 z-50">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary text-white p-2 rounded-full group-hover:bg-primary-dark transition-colors">
-              <GraduationCap size={28} />
-            </div>
+            <img src="https://i.ibb.co/hRMKW1y9/schoollogo.png" alt="Crossroad High School Logo" className="h-12 w-auto" />
             <div className="flex flex-col">
               <span className="font-bold text-xl leading-none text-primary">Crossroad</span>
               <span className="text-xs font-medium text-gray-500 tracking-wider uppercase">Private High School</span>
@@ -130,7 +128,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <GraduationCap className="text-primary" size={24} />
+            <img src="https://i.ibb.co/hRMKW1y9/schoollogo.png" alt="Crossroad High School Logo" className="h-8 w-auto" />
             <span className="font-bold text-gray-900">Crossroad School</span>
           </div>
           
