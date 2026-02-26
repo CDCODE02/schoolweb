@@ -33,7 +33,7 @@ export default function Activities() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
                <img 
-                src="https://picsum.photos/seed/students_walking/800/600" 
+                src="https://i.ibb.co/G3BTMsLq/testro.webp" 
                 alt="Students walking" 
                 className="rounded-lg shadow-lg w-full"
                 referrerPolicy="no-referrer"
