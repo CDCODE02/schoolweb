@@ -27,12 +27,12 @@ export default function Academics() {
     {
       title: 'Mathematics',
       desc: 'We view Mathematics as a language of logic and patterns. Our curriculum ranges from Algebra and Geometry to Calculus and Statistics, focusing on both theoretical understanding and real-world application.',
-      img: 'https://picsum.photos/seed/math_class/600/600'
+      img: 'https://i.ibb.co/M5crh80H/school-template-curriculum-img-5.jpg'
     },
     {
       title: 'Science',
       desc: 'Our Science program is hands-on and inquiry-based. Through laboratory experiments and field studies in Biology, Chemistry, and Physics, students develop a deep appreciation for the natural world and the scientific method.',
-      img: 'https://picsum.photos/seed/science_class/600/600'
+      img: 'https://i.ibb.co/fY6CNLYD/school-template-curriculum-img-4.jpg'
     }
   ];
 
