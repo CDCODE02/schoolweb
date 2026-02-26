@@ -12,7 +12,7 @@ export default function Academics() {
     {
       title: 'Fine Arts',
       desc: 'The Fine Arts department encourages students to explore their creativity through visual and performing arts. Whether it is painting, sculpture, drama, or music, our programs provide a platform for self-expression and artistic growth.',
-      img: 'https://picsum.photos/seed/art_class/600/600'
+      img: 'https://i.ibb.co/yBZQZ4wn/school-template-curriculum-img-2.jpg'
     },
     {
       title: 'Humanities',
