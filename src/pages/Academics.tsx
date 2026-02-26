@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { ChevronLeft, ChevronRight, Globe, Award, Star, Trophy, Box, Sprout } from 'lucide-react';
 
 export default function Academics() {
   const subjects = [
@@ -123,14 +124,64 @@ export default function Academics() {
       {/* College Opportunities */}
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
          <div className="max-w-7xl mx-auto text-center">
-            <h3 className="font-serif text-2xl text-gray-900 font-bold mb-12">College Opportunities</h3>
-            <div className="flex flex-wrap justify-center gap-12 opacity-60 grayscale">
-               {/* Placeholders for logos */}
-               <div className="h-12 w-32 bg-gray-300 rounded"></div>
-               <div className="h-12 w-32 bg-gray-300 rounded"></div>
-               <div className="h-12 w-32 bg-gray-300 rounded"></div>
-               <div className="h-12 w-32 bg-gray-300 rounded"></div>
-               <div className="h-12 w-32 bg-gray-300 rounded"></div>
+            <h3 className="font-serif text-3xl text-gray-900 font-bold mb-16">College Opportunities</h3>
+            
+            <div className="relative flex items-center justify-center group">
+              <button className="absolute left-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors hidden md:block text-gray-400 hover:text-gray-600">
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-12 md:gap-16 items-center opacity-70 grayscale px-12 w-full overflow-hidden">
+                {/* Logo 1: Globe/Standard */}
+                <div className="h-12 flex items-center gap-2 border-2 border-gray-800 rounded-full px-4 py-1 flex-shrink-0">
+                    <Globe className="w-8 h-8 text-gray-800" />
+                    <div className="flex flex-col items-start leading-none">
+                        <span className="text-[0.5rem] uppercase tracking-widest font-bold">International</span>
+                        <span className="text-xs font-black uppercase">Mega Standard</span>
+                    </div>
+                </div>
+
+                {/* Logo 2: Wreath */}
+                <div className="flex flex-col items-center justify-center flex-shrink-0">
+                     <Award className="w-10 h-10 text-gray-800 mb-1" />
+                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Hyper Best</span>
+                     <span className="text-[0.5rem] uppercase tracking-widest">Award Winning</span>
+                </div>
+
+                {/* Logo 3: Wreath Star */}
+                <div className="flex flex-col items-center justify-center flex-shrink-0">
+                     <Star className="w-10 h-10 text-gray-800 mb-1" />
+                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Ultimate</span>
+                     <span className="text-[0.5rem] uppercase tracking-widest">Winner</span>
+                </div>
+
+                {/* Logo 4: Wreath Trophy */}
+                <div className="flex flex-col items-center justify-center flex-shrink-0">
+                     <Trophy className="w-10 h-10 text-gray-800 mb-1" />
+                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Ultra</span>
+                     <span className="text-[0.5rem] uppercase tracking-widest">Prestigious</span>
+                </div>
+
+                {/* Logo 5: Logoipsum Squares */}
+                <div className="flex items-center gap-2 flex-shrink-0">
+                    <div className="flex gap-1">
+                        <div className="w-5 h-5 bg-gray-800"></div>
+                        <div className="w-5 h-5 bg-gray-800 rounded-full"></div>
+                    </div>
+                    <span className="font-bold text-xl text-gray-800">logoipsum</span>
+                </div>
+                
+                 {/* Logo 6: Wheat */}
+                <div className="flex items-center gap-2 flex-shrink-0">
+                     <Sprout className="w-8 h-8 text-gray-800" />
+                     <span className="font-bold text-lg text-gray-800 uppercase tracking-widest">Logoipsum</span>
+                </div>
+
+              </div>
+
+              <button className="absolute right-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors hidden md:block text-gray-400 hover:text-gray-600">
+                <ChevronRight className="w-8 h-8" />
+              </button>
             </div>
          </div>
       </section>
