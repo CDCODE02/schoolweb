@@ -69,7 +69,7 @@ export default function Activities() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
                <img 
-                src="https://picsum.photos/seed/library_books/800/600" 
+                src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2025/10/16110.jpg" 
                 alt="Student with books" 
                 className="rounded-lg shadow-lg w-full"
                 referrerPolicy="no-referrer"
