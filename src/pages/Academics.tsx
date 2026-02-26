@@ -169,7 +169,7 @@ export default function Academics() {
                     transition={{ duration: 0.3 }}
                     src={logo} 
                     alt={`Partner Logo ${idx}`} 
-                    className={`h-12 w-auto ${idx > 0 ? 'hidden md:block' : ''} ${idx > 2 ? 'hidden lg:block' : ''}`} 
+                    className={`h-24 w-auto ${idx > 0 ? 'hidden md:block' : ''} ${idx > 2 ? 'hidden lg:block' : ''}`} 
                   />
                 ))}
               </div>
