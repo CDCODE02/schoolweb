@@ -160,7 +160,7 @@ export default function Academics() {
                 <ChevronLeft className="w-8 h-8" />
               </button>
               
-              <div className="flex flex-nowrap justify-center gap-12 md:gap-16 items-center opacity-70 grayscale px-12 w-full overflow-hidden">
+              <div className="flex flex-nowrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale px-8 md:px-12 w-full overflow-hidden">
                 {visibleLogos.map((logo, idx) => (
                   <motion.img 
                     key={`${startIndex}-${idx}`}
@@ -169,7 +169,7 @@ export default function Academics() {
                     transition={{ duration: 0.3 }}
                     src={logo} 
                     alt={`Partner Logo ${idx}`} 
-                    className={`h-24 w-auto ${idx === 2 ? 'hidden md:block' : ''} ${idx > 2 ? 'hidden lg:block' : ''}`} 
+                    className={`h-16 md:h-24 w-auto ${idx === 2 ? 'hidden md:block' : ''} ${idx > 2 ? 'hidden lg:block' : ''}`} 
                   />
                 ))}
               </div>
