@@ -1,8 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Loader2, Check, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setErrorMessage(data.error || 'Failed to send message');
+      }
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage('Network error. Please try again.');
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Header */}
@@ -59,42 +105,84 @@ export default function Contact() {
              className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20"
           >
             <h3 className="text-white text-xl font-serif mb-6">Send Us a Message</h3>
-            <form className="space-y-4">
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Full name" 
-                  className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
+            
+            {status === 'success' ? (
+              <div className="bg-green-500/20 border border-green-500/50 rounded p-6 text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500 mb-4">
+                  <Check className="text-white" size={24} />
+                </div>
+                <h4 className="text-white font-bold text-lg mb-2">Message Sent!</h4>
+                <p className="text-white/80">Thank you for contacting us. We will get back to you shortly.</p>
+                <button 
+                  onClick={() => setStatus('idle')}
+                  className="mt-4 text-sm text-white underline hover:text-white/80"
+                >
+                  Send another message
+                </button>
               </div>
-              <div>
-                <input 
-                  type="email" 
-                  placeholder="Email address" 
-                  className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-              </div>
-              <div>
-                <input 
-                  type="text" 
-                  placeholder="Subject" 
-                  className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-              </div>
-              <div>
-                <textarea 
-                  placeholder="Your message" 
-                  rows={4}
-                  className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
-                ></textarea>
-              </div>
-              <button 
-                type="button"
-                className="bg-white text-primary font-bold uppercase tracking-wider px-8 py-3 rounded hover:bg-gray-100 transition-colors"
-              >
-                Submit
-              </button>
-            </form>
+            ) : (
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                {status === 'error' && (
+                  <div className="bg-red-500/20 border border-red-500/50 rounded p-3 flex items-center gap-2 text-white text-sm">
+                    <AlertCircle size={16} />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+                
+                <div>
+                  <input 
+                    type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Full name" 
+                    required
+                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email address" 
+                    required
+                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="text" 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Subject" 
+                    required
+                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <div>
+                  <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your message" 
+                    rows={4}
+                    required
+                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+                  ></textarea>
+                </div>
+                <button 
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="bg-white text-primary font-bold uppercase tracking-wider px-8 py-3 rounded hover:bg-gray-100 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
+                >
+                  {status === 'loading' && <Loader2 className="animate-spin" size={18} />}
+                  {status === 'loading' ? 'Sending...' : 'Submit'}
+                </button>
+              </form>
+            )}
           </motion.div>
 
         </div>
