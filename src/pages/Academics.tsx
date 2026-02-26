@@ -7,7 +7,7 @@ export default function Academics() {
     {
       title: 'Computer Science',
       desc: 'Our Computer Science program goes beyond coding. Students learn computational thinking, problem-solving, and the ethical implications of technology. From introductory courses in Python to advanced AP Computer Science, we prepare students for the digital future.',
-      img: 'https://picsum.photos/seed/cs_class/600/600'
+      img: 'https://www.smwc.edu/wp-content/uploads/2022/09/students-in-campus-life-office-e1663091520151.jpg'
     },
     {
       title: 'Fine Arts',
