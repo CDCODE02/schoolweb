@@ -51,7 +51,7 @@ export default function Activities() {
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <div className="w-full md:w-1/2">
                <img 
-                src="https://picsum.photos/seed/basketball_game/800/600" 
+                src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/school-template-activities-img-2.jpg" 
                 alt="Basketball game" 
                 className="rounded-lg shadow-lg w-full"
                 referrerPolicy="no-referrer"
