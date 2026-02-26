@@ -132,51 +132,13 @@ export default function Academics() {
               </button>
               
               <div className="flex flex-wrap md:flex-nowrap justify-center gap-12 md:gap-16 items-center opacity-70 grayscale px-12 w-full overflow-hidden">
-                {/* Logo 1: Globe/Standard */}
-                <div className="h-12 flex items-center gap-2 border-2 border-gray-800 rounded-full px-4 py-1 flex-shrink-0">
-                    <Globe className="w-8 h-8 text-gray-800" />
-                    <div className="flex flex-col items-start leading-none">
-                        <span className="text-[0.5rem] uppercase tracking-widest font-bold">International</span>
-                        <span className="text-xs font-black uppercase">Mega Standard</span>
-                    </div>
-                </div>
-
-                {/* Logo 2: Wreath */}
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                     <Award className="w-10 h-10 text-gray-800 mb-1" />
-                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Hyper Best</span>
-                     <span className="text-[0.5rem] uppercase tracking-widest">Award Winning</span>
-                </div>
-
-                {/* Logo 3: Wreath Star */}
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                     <Star className="w-10 h-10 text-gray-800 mb-1" />
-                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Ultimate</span>
-                     <span className="text-[0.5rem] uppercase tracking-widest">Winner</span>
-                </div>
-
-                {/* Logo 4: Wreath Trophy */}
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                     <Trophy className="w-10 h-10 text-gray-800 mb-1" />
-                     <span className="text-[0.6rem] font-bold uppercase tracking-wider">Ultra</span>
-                     <span className="text-[0.5rem] uppercase tracking-widest">Prestigious</span>
-                </div>
-
-                {/* Logo 5: Logoipsum Squares */}
-                <div className="flex items-center gap-2 flex-shrink-0">
-                    <div className="flex gap-1">
-                        <div className="w-5 h-5 bg-gray-800"></div>
-                        <div className="w-5 h-5 bg-gray-800 rounded-full"></div>
-                    </div>
-                    <span className="font-bold text-xl text-gray-800">logoipsum</span>
-                </div>
-                
-                 {/* Logo 6: Wheat */}
-                <div className="flex items-center gap-2 flex-shrink-0">
-                     <Sprout className="w-8 h-8 text-gray-800" />
-                     <span className="font-bold text-lg text-gray-800 uppercase tracking-widest">Logoipsum</span>
-                </div>
-
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-18.svg" alt="Partner Logo 1" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-20.svg" alt="Partner Logo 2" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-21.svg" alt="Partner Logo 3" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-22.svg" alt="Partner Logo 4" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-2.svg" alt="Partner Logo 5" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-3.svg" alt="Partner Logo 6" className="h-12 w-auto" />
+                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-5.svg" alt="Partner Logo 7" className="h-12 w-auto" />
               </div>
 
               <button className="absolute right-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors hidden md:block text-gray-400 hover:text-gray-600">
