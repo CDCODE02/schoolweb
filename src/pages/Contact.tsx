@@ -52,8 +52,8 @@ export default function Contact() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="bg-primary py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <section className="bg-primary py-12 md:py-20 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           
           {/* Left Info */}
           <motion.div 
@@ -61,17 +61,17 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             className="text-white"
           >
-            <h1 className="font-serif text-5xl md:text-6xl mb-8">Contact</h1>
-            <p className="text-white/80 text-lg mb-12 leading-relaxed max-w-md">
+            <h1 className="font-serif text-4xl md:text-6xl mb-6 md:mb-8">Contact</h1>
+            <p className="text-white/80 text-base md:text-lg mb-8 md:mb-12 leading-relaxed max-w-md">
               We'd love to hear from you. Whether you have questions about admissions, academics, or just want to say hello, our team is here to help.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div className="flex gap-4">
                 <MapPin className="mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Address</h3>
-                  <p className="text-white/80">
+                  <p className="text-white/80 text-sm md:text-base">
                     28 Main Street, <br />
                     Dawsonville, GA 30534, <br />
                     United States.
@@ -83,7 +83,7 @@ export default function Contact() {
                 <Phone className="mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Phone</h3>
-                  <p className="text-white/80">+1 812 221 1479</p>
+                  <p className="text-white/80 text-sm md:text-base">+1 812 221 1479</p>
                 </div>
               </div>
 
@@ -91,7 +91,7 @@ export default function Contact() {
                 <Mail className="mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-white/80 break-words">administration@crossroadprivatehighschool.org</p>
+                  <p className="text-white/80 text-sm md:text-base break-words">administration@crossroadprivatehighschool.org</p>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function Contact() {
              initial={{ opacity: 0, x: 30 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ delay: 0.2 }}
-             className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20"
+             className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-lg border border-white/20"
           >
             <h3 className="text-white text-xl font-serif mb-6">Send Us a Message</h3>
             
@@ -121,7 +121,7 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="space-y-3 md:space-y-4" onSubmit={handleSubmit}>
                 {status === 'error' && (
                   <div className="bg-red-500/20 border border-red-500/50 rounded p-3 flex items-center gap-2 text-white text-sm">
                     <AlertCircle size={16} />
@@ -137,7 +137,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Full name" 
                     required
-                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    className="w-full px-3 py-2 md:px-4 md:py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Email address" 
                     required
-                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    className="w-full px-3 py-2 md:px-4 md:py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -159,7 +159,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Subject" 
                     required
-                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    className="w-full px-3 py-2 md:px-4 md:py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -168,15 +168,15 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your message" 
-                    rows={4}
+                    rows={3}
                     required
-                    className="w-full px-4 py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+                    className="w-full px-3 py-2 md:px-4 md:py-3 rounded bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none text-sm md:text-base"
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
                   disabled={status === 'loading'}
-                  className="bg-white text-primary font-bold uppercase tracking-wider px-8 py-3 rounded hover:bg-gray-100 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
+                  className="bg-white text-primary font-bold uppercase tracking-wider px-6 py-2 md:px-8 md:py-3 rounded hover:bg-gray-100 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2 text-sm md:text-base"
                 >
                   {status === 'loading' && <Loader2 className="animate-spin" size={18} />}
                   {status === 'loading' ? 'Sending...' : 'Submit'}
