@@ -36,6 +36,32 @@ export default function Academics() {
     }
   ];
 
+  const [startIndex, setStartIndex] = React.useState(0);
+
+  const logos = [
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-18.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-20.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-21.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-22.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-2.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-3.svg",
+    "https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-5.svg"
+  ];
+
+  const next = () => {
+    setStartIndex((prev) => (prev + 1) % logos.length);
+  };
+
+  const prev = () => {
+    setStartIndex((prev) => (prev - 1 + logos.length) % logos.length);
+  };
+
+  // Get 5 visible logos handling wrap-around
+  const visibleLogos = [];
+  for (let i = 0; i < 5; i++) {
+    visibleLogos.push(logos[(startIndex + i) % logos.length]);
+  }
+
   return (
     <div className="w-full">
       {/* Header */}
@@ -127,21 +153,31 @@ export default function Academics() {
             <h3 className="font-serif text-3xl text-gray-900 font-bold mb-16">College Opportunities</h3>
             
             <div className="relative flex items-center justify-center group">
-              <button className="absolute left-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors hidden md:block text-gray-400 hover:text-gray-600">
+              <button 
+                onClick={prev}
+                className="absolute left-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors z-10 text-gray-400 hover:text-gray-600"
+              >
                 <ChevronLeft className="w-8 h-8" />
               </button>
               
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-12 md:gap-16 items-center opacity-70 grayscale px-12 w-full overflow-hidden">
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-18.svg" alt="Partner Logo 1" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-20.svg" alt="Partner Logo 2" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-21.svg" alt="Partner Logo 3" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-22.svg" alt="Partner Logo 4" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-2.svg" alt="Partner Logo 5" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-3.svg" alt="Partner Logo 6" className="h-12 w-auto" />
-                <img src="https://websitedemos.net/school-02/wp-content/uploads/sites/858/2021/05/logo-5.svg" alt="Partner Logo 7" className="h-12 w-auto" />
+              <div className="flex flex-nowrap justify-center gap-12 md:gap-16 items-center opacity-70 grayscale px-12 w-full overflow-hidden">
+                {visibleLogos.map((logo, idx) => (
+                  <motion.img 
+                    key={`${startIndex}-${idx}`}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                    src={logo} 
+                    alt={`Partner Logo ${idx}`} 
+                    className={`h-12 w-auto ${idx > 0 ? 'hidden md:block' : ''} ${idx > 2 ? 'hidden lg:block' : ''}`} 
+                  />
+                ))}
               </div>
 
-              <button className="absolute right-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors hidden md:block text-gray-400 hover:text-gray-600">
+              <button 
+                onClick={next}
+                className="absolute right-0 p-2 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors z-10 text-gray-400 hover:text-gray-600"
+              >
                 <ChevronRight className="w-8 h-8" />
               </button>
             </div>
