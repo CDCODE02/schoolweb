@@ -33,7 +33,17 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get('content-type');
+      let data;
+      
+      if (contentType && contentType.indexOf('application/json') !== -1) {
+        data = await response.json();
+      } else {
+        // Handle non-JSON response (likely an error page or 404)
+        const text = await response.text();
+        console.error('Non-JSON response:', text);
+        throw new Error('Server returned an invalid response. Please try again later.');
+      }
 
       if (response.ok) {
         setStatus('success');
@@ -43,9 +53,10 @@ export default function Contact() {
         setStatus('error');
         setErrorMessage(data.error || 'Failed to send message');
       }
-    } catch (error) {
+    } catch (error: any) {
+      console.error('Submission error:', error);
       setStatus('error');
-      setErrorMessage('Network error. Please try again.');
+      setErrorMessage(error.message || 'Network error. Please try again.');
     }
   };
 
