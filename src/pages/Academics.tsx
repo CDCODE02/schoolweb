@@ -17,12 +17,12 @@ export default function Academics() {
     {
       title: 'Humanities',
       desc: 'In Humanities, students engage with the great works of literature, philosophy, and history. We foster critical thinking and empathy by examining the human experience across different cultures and time periods.',
-      img: 'https://picsum.photos/seed/humanities_class/600/600'
+      img: 'https://i.ibb.co/prkWq5K5/school-template-curriculum-img-3.jpg'
     },
     {
       title: 'History',
       desc: 'Our History curriculum emphasizes primary source analysis and historical inquiry. Students explore the events that have shaped our world, developing a nuanced understanding of the past to better understand the present.',
-      img: 'https://picsum.photos/seed/history_class/600/600'
+      img: 'https://i.ibb.co/GfsdCtJ1/historyschoolimg.jpg'
     },
     {
       title: 'Mathematics',
