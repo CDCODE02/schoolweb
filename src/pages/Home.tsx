@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Check, Loader2 } from 'lucide-react';
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus('loading');
+    
+    // Simulate API call
+    setTimeout(() => {
+      setStatus('success');
+      setEmail('');
+      
+      // Reset status after 3 seconds
+      setTimeout(() => {
+        setStatus('idle');
+      }, 3000);
+    }, 1500);
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -195,26 +216,48 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-1 bg-white/30 mx-auto mb-8"></div>
           <h2 className="font-serif text-3xl md:text-4xl mb-6">Stay updated with what's happening at <br /> Crossroad High School</h2>
-          <form 
-            className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto mt-8"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert('Thank you for subscribing!');
-            }}
-          >
-            <input 
-              type="email" 
-              placeholder="Email address" 
-              required
-              className="px-6 py-3 rounded bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 w-full"
-            />
-            <button 
-              type="submit"
-              className="px-8 py-3 bg-gray-900 text-white font-bold uppercase text-sm tracking-wider rounded hover:bg-gray-800 transition-colors cursor-pointer"
+          
+          {status === 'success' ? (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-white/10 backdrop-blur-sm p-8 rounded-lg max-w-lg mx-auto mt-8 border border-white/20"
             >
-              Subscribe
-            </button>
-          </form>
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                  <Check className="text-white" size={24} />
+                </div>
+                <h3 className="text-xl font-serif">Thank you for subscribing!</h3>
+                <p className="text-white/80">You'll receive our next newsletter in your inbox.</p>
+              </div>
+            </motion.div>
+          ) : (
+            <form 
+              className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto mt-8"
+              onSubmit={handleSubscribe}
+            >
+              <input 
+                type="email" 
+                placeholder="Email address" 
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={status === 'loading'}
+                className="px-6 py-3 rounded bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 w-full disabled:opacity-70"
+              />
+              <button 
+                type="submit"
+                disabled={status === 'loading'}
+                className="px-8 py-3 bg-gray-900 text-white font-bold uppercase text-sm tracking-wider rounded hover:bg-gray-800 transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center min-w-[140px]"
+              >
+                {status === 'loading' ? (
+                  <Loader2 className="animate-spin" size={20} />
+                ) : (
+                  'Subscribe'
+                )}
+              </button>
+            </form>
+          )}
         </div>
       </section>
     </div>
