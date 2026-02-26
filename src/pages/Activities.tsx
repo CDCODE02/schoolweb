@@ -8,7 +8,7 @@ export default function Activities() {
       <section className="relative py-32 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1514119977933-72df5e5e0998?auto=format&fit=crop&q=80" 
+            src="https://www.reed.edu/admission-aid/assets/images/feature-panels/reed-this-is-reed-reedies-tug-of-war.jpg" 
             alt="Co-curricular Activities Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
