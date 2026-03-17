@@ -137,7 +137,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 28 Main Street, Dawsonville, GA<br />
                 30534, United States.
               </p>
-              <p>+1 812 221 1479</p>
+              <p>+18023776031</p>
               <p className="hover:text-primary cursor-pointer break-words">
                 administration@crossroadprivatehighschool.org
               </p>
